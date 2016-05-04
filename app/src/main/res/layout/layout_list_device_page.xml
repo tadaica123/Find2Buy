@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.leontran.find2buy.activity.HomePageActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_refresh"
+                android:id="@+id/btn_refresh"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_button_default_violet"
+                android:layout_gravity="end"
+                android:adjustViewBounds="true"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_list_device_page" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_setting_search"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom|end"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:minHeight="100dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="1dp">
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_near_priority"
+            android:layout_width="wrap_content"
+            android:checked="false"
+            android:text="Ưu tiên cửa hàng gần tôi"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rd_ascending"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:textSize="18sp"
+                android:text="Sắp xếp theo giá tăng dần"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rd_decrease"
+                android:layout_width="wrap_content"
+                android:checked="false"
+                android:textSize="18sp"
+                android:text="Sắp xếp theo giá giảm dần"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_settings"
+        android:layout_margin="@dimen/fab_margin" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -11,11 +11,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.leontran.find2buy.activity.ListStoreAcitivty"
+    tools:context="com.leontran.themobilevn.activity.ListStoreAcitivty"
     tools:showIn="@layout/layout_list_device_page">
 
     <ScrollView
         android:layout_width="match_parent"
+        android:id="@+id/scrollView"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -45,6 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:adjustViewBounds="true"
+                        android:padding="5dp"
                         android:src="@android:drawable/ic_menu_gallery" />
 
                     <LinearLayout
@@ -58,8 +60,6 @@
                             android:id="@+id/txt_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:maxLines="2"
-                            android:text="SAMSUNG GALAXY S7"
                             android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/text_size_large"
                             android:textStyle="bold" />
@@ -67,16 +67,31 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Giá thấp nhất của sản phẩm:"
+                            android:text="@string/min_price"
                             android:textSize="@dimen/text_size_small" />
 
                         <TextView
-                            android:id="@+id/txt_price"
+                            android:id="@+id/txt_price_min"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:textColor="@color/red"
+                            android:textStyle="bold"
                             android:textSize="@dimen/text_size_xlarge" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/max_price"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <TextView
+                            android:id="@+id/txt_price_max"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_size_large" />
 
 
                     </LinearLayout>
@@ -94,6 +109,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:visibility="gone"
                     android:background="@drawable/bg_button_list"
                     android:orientation="horizontal">
 
@@ -102,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
-                        android:text="XEM CHI TIẾT SẢN PHẨM"
+                        android:text="@string/device_detail"
                         android:textSize="@dimen/text_size_normal"
                         android:textStyle="bold" />
 
@@ -125,31 +141,25 @@
                 android:layout_height="1dp"
                 android:layout_marginEnd="3dp"
                 android:background="#BDC3C7"
-                android:orientation="horizontal"></ImageView>
+                android:orientation="horizontal">
+
+            </ImageView>
 
             <include layout="@layout/layout_devive_information"></include>
 
             <TextView
-                android:text="DANH SÁCH CỦA HÀNG"
+                android:text="@string/list_store"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textSize="@dimen/text_size_normal"
                 android:layout_height="match_parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="3dp"
-                android:background="#BDC3C7"
-                android:orientation="horizontal">
-            </LinearLayout>
-
-            <com.leontran.find2buy.layouts.ExpandableHeightListView
+            <com.leontran.themobilevn.layouts.ExpandableHeightListView
+                android:id="@+id/lv_store"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </com.leontran.find2buy.layouts.ExpandableHeightListView>
+            </com.leontran.themobilevn.layouts.ExpandableHeightListView>
         </LinearLayout>
     </ScrollView>
 

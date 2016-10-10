@@ -11,10 +11,11 @@
 
         <SearchView
             android:id="@+id/search_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:iconifiedByDefault="true"
             android:searchIcon="@drawable/ic_search"
             android:goIcon="@drawable/ic_send"
+            android:layout_alignParentEnd="true"
             android:closeIcon="@drawable/ic_close"
             android:layout_height="wrap_content">
 
@@ -23,13 +24,15 @@
         <TextView
             android:id="@+id/txt_notice"
             android:layout_width="wrap_content"
-            android:layout_toEndOf="@+id/search_view"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="50dp"
             android:gravity="center_vertical"
             android:visibility="visible"
             android:layout_height="match_parent"
-            android:text="Nhấn vào biểu tượng kính lúp và nhập chính xác tên thiết bị để bắt đầu tìm kiếm..."
+            android:text="@string/search_view_notice"
             android:textColor="@color/gray"/>
+
     </RelativeLayout>
+
+
 
 </LinearLayout>

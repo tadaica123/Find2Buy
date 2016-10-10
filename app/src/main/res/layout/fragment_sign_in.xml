@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white_blur"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/white"
+        android:layout_height="@dimen/button_height_size_xnormal" />
+
+    <EditText
+        android:id="@+id/edt_pass"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/password"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:background="@color/white_blur"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/white"
+        android:layout_height="@dimen/button_height_size_xnormal" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button_white_violet"
+        android:layout_marginEnd="20dp"
+        android:text="@string/sign_in"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/flat_gray_2"
+        android:layout_height="@dimen/button_height_size_xnormal" />
+
+
+</LinearLayout>

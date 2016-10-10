@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_button_default_violet"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:clickable="true"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_button_default_violet"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_keyboard_arrow_left" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btn_back"
+            android:textStyle="bold"
+            android:text="@string/nav_menu_sign_up"
+            android:textColor="@color/white"
+            android:layout_gravity="start|center_vertical"
+            />
+
+        <Button
+            android:id="@+id/btn_next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textStyle="normal"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/bg_button_default_violet"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:layout_gravity="start|center_vertical"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_sign_in_fb"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button_white_violet"
+        android:layout_marginEnd="20dp"
+        android:text="@string/sign_in_by_facebook"
+        android:textSize="@dimen/text_size_small"
+        android:drawableStart="@drawable/ic_fb"
+        android:textColor="@color/flat_gray_2"
+        android:layout_height="@dimen/button_height_size_xnormal" />
+
+    <com.leontran.themobilevn.layouts.MyCustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"></com.leontran.themobilevn.layouts.MyCustomViewPager>
+
+
+</LinearLayout>

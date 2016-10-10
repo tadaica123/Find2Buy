@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.leontran.find2buy.activity.HomePageActivity">
+    tools:context="com.leontran.themobilevn.activity.HomePageActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -26,15 +26,15 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/bg_button_default_violet"
                 android:layout_gravity="end"
+                android:visibility="gone"
                 android:adjustViewBounds="true"
                 android:layout_height="match_parent" />
         </android.support.v7.widget.Toolbar>
 
         <include layout="@layout/list_header_layout" />
 
+
     </android.support.design.widget.AppBarLayout>
-
-
 
     <include layout="@layout/content_home_page" />
 

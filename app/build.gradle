@@ -5,11 +5,12 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.leontran.find2buy.find2buy"
+        applicationId "com.leontran.themobilevn"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -19,16 +20,24 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+//    compile project(':facebook')
+
+    compile project(':simple-fb')
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile files('libs/httpmime-4.1.3.jar')
     compile files('libs/universal-image-loader-1.9.4.jar')
     compile files('libs/org.apache.http.legacy.jar')
-    compile files('libs/zbar.jar')
+
 }
